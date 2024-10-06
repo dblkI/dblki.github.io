@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background-color: #FCFAEE;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@ button {
     width: calc(100% - 20px);
     padding: 15px;
     margin-top: 20px;
-    background-color: #28a745;
+    background-color: #DA8359;
     color: white;
     border: none;
     border-radius: 6px;
@@ -57,7 +57,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #DA8359;
 }
 
 /* Posicionar el texto "Powered by DEMÉTER" en la esquina inferior derecha */
