@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
   
     if (username === 'admin' && password === 'admin') {
-        window.location.href = 'pages/home.html';
+        window.location.href = "/pages/home.html";
     } else {
         alert('Credenciales incorrectas, intente nuevamente.');
     }

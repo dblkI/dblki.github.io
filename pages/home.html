@@ -12,12 +12,10 @@
       <img src="../images/logo.png" alt="DEMÉTER Logo">
     </div>
     <div class="menu-icon" id="menuIcon">
-      <!-- Ícono de menú tipo hamburguesa -->
       &#9776;
     </div>
   </header>
 
-  <!-- Menú desplegable -->
   <nav class="menu" id="menu">
     <ul>
       <li id="username">Usuario: admin</li>
@@ -29,10 +27,20 @@
   </nav>
 
   <main>
-    <h1>Bienvenido a la página principal</h1>
-    <!-- Aquí irá el contenido principal -->
+    <div class="actions">
+        <button id="btnAddMarker">Obtener ubicación</button>
+        <button id="btnDrawPolygon">Delimitar trazado</button>
+        <button id="btnClearMap">Limpiar mapa</button>
+        <button id="btnGenerateKeylines">Generar Keylines</button> <!-- Cuarto botón -->
+    </div>
+    <div id="map"></div> <!-- Contenedor del mapa -->
+    <div id="loading" style="display: none;"> <!-- Contenedor para mensaje de carga -->
+        <p>Generando Keylines...</p>
+        <div class="loading-animation"></div> <!-- Aquí colocamos la animación -->
+    </div>
   </main>
-
+  
   <script src="../js/home.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADSFmUUMZqs7Q30cqZp_dAb64ZqUWLCl4&libraries=drawing&callback=initMap" async defer></script>
 </body>
 </html>

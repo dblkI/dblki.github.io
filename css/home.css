@@ -3,35 +3,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #28a745;
-    color: white;
-    position: relative;
+    width: 100%;
+    padding: 10px 20px; /* Aumentamos el padding para separarlos de la orilla */
+    background-color: #b3aeae;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Ajustamos el tamaño y el espaciado del logo */
 .logo img {
-    width: 150px; /* Aumentamos el tamaño del logo */
+    width: 50px; /* Mantiene el tamaño del logo */
+    height: 50px; 
+    object-fit: contain; /* Mantiene proporción del logo */
+    margin-left: 10px; /* Añadimos margen izquierdo para separarlo más de la orilla */
 }
 
 /* Estilo del ícono de menú tipo hamburguesa */
 .menu-icon {
-    font-size: 40px; /* Aumentamos el tamaño del ícono */
+    font-size: 30px; /* Mantiene el tamaño del menú */
     cursor: pointer;
     user-select: none;
+    margin-right: 10px; /* Añadimos margen derecho para separarlo de la orilla */
 }
 
 /* Estilo del menú desplegable */
 .menu {
     position: absolute;
-    top: 70px; /* Mueve el menú debajo del header */
-    right: 20px;
-    background-color: white;
+    top: 80px; /* Posición ajustada para estar debajo del header */
+    right: 20px; /* Ajustamos la posición para estar más separado de la orilla */
+    background-color: rgba(255, 255, 255, 0.726);
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 200px;
-    display: none; /* Ocultamos el menú por defecto */
-    z-index: 10; /* Aseguramos que el menú aparezca por encima de otros elementos */
+    display: none; /* Oculto por defecto */
+    z-index: 10; /* Mantiene el menú encima de otros elementos */
 }
 
 .menu ul {
@@ -73,4 +78,82 @@ header {
     .menu li {
         padding: 10px;
     }
+}
+
+/* Estilo general del body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f8ff;
+    margin: 0;
+}
+
+/* Estilos para el contenedor principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilo para el contenedor de los botones */
+.actions {
+    display: flex;
+    flex-direction: column;
+    width: 25%; /* Ajusta el ancho del contenedor de botones */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los botones de acción */
+.actions button {
+    margin: 10px 0; /* Espaciado entre botones */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el contenedor del mapa */
+#map {
+    height: 400px; /* Altura del mapa */
+    width: 70%; /* Ancho del mapa */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del contenedor de carga */
+#loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Tamaño similar al mapa */
+    width: 70%;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.loading-animation {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
