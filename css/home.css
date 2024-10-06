@@ -1,0 +1,76 @@
+/* Estilo del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    position: relative;
+}
+
+.logo img {
+    width: 150px; /* Aumentamos el tamaño del logo */
+}
+
+/* Estilo del ícono de menú tipo hamburguesa */
+.menu-icon {
+    font-size: 40px; /* Aumentamos el tamaño del ícono */
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Estilo del menú desplegable */
+.menu {
+    position: absolute;
+    top: 70px; /* Mueve el menú debajo del header */
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 200px;
+    display: none; /* Ocultamos el menú por defecto */
+    z-index: 10; /* Aseguramos que el menú aparezca por encima de otros elementos */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    text-align: center;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #218838;
+}
+
+/* Estilo responsivo */
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 150px;
+    }
+
+    .menu li {
+        padding: 10px;
+    }
+}

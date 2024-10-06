@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 30px;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    width: calc(100% - 20px); /* Añadir un poco de margen interno */
+    padding: 15px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Posicionar el texto "Powered by DEMÉTER" en la esquina inferior derecha */
+.powered-by-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.powered-by-container img {
+    width: 20px; /* Tamaño del logo pequeño */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.powered-by {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .login-box {
+        padding: 30px;
+        max-width: 100%;
+    }
+
+    input[type="text"], input[type="password"], button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
