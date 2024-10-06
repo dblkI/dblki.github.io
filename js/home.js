@@ -84,6 +84,8 @@ function clearMap() {
 }
 
 // Función para generar las keylines
+// ... Código anterior ...
+
 function generateKeylines() {
     if (!polygon) {
         alert("Primero debes dibujar un polígono.");
@@ -110,12 +112,40 @@ function generateKeylines() {
         // Simular la generación de keylines con un tiempo de espera
         setTimeout(() => {
             alert("Keylines generadas con éxito.");
+
+            // Mostrar el botón para enviar ruta a Google Maps
+            document.getElementById("btnSendRoute").style.display = "block";
+
             // Restauramos el mapa y ocultamos el mensaje de carga
             document.getElementById("map").style.display = "block";
             document.getElementById("loading").style.display = "none";
         }, 3000); // Simulamos un proceso de 3 segundos
     }
 }
+
+// Función para enviar ruta a Google Maps
+document.getElementById("btnSendRoute").addEventListener("click", function() {
+    if (!polygon) {
+        alert("No se ha generado ninguna keyline. Dibuja un polígono primero.");
+        return;
+    }
+
+    // Obtenemos las coordenadas del polígono
+    const path = polygon.getPath();
+    let waypoints = [];
+    for (let i = 0; i < path.getLength(); i++) {
+        const latLng = path.getAt(i);
+        waypoints.push(latLng.lat() + ',' + latLng.lng());
+    }
+
+    // Crear URL para Google Maps
+    const origin = waypoints[0]; // Usamos el primer punto como origen
+    const destination = waypoints[waypoints.length - 1]; // Usamos el último punto como destino
+    const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints.slice(1, -1).join('|')}&travelmode=driving`;
+
+    // Abrir la URL de Google Maps en una nueva pestaña
+    window.open(url, '_blank');
+});
 
 
 // Seleccionamos el ícono de menú y el menú desplegable

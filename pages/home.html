@@ -28,10 +28,11 @@
 
   <main>
     <div class="actions">
-        <button id="btnAddMarker">Obtener ubicación</button>
-        <button id="btnDrawPolygon">Delimitar trazado</button>
+        <button id="btnAddMarker">Añadir marcador</button>
+        <button id="btnDrawPolygon">Dibujar polígono</button>
         <button id="btnClearMap">Limpiar mapa</button>
-        <button id="btnGenerateKeylines">Generar Keylines</button> <!-- Cuarto botón -->
+        <button id="btnGenerateKeylines">Generar Keylines</button>
+        <button id="btnSendRoute" style="display: none;">Enviar ruta a Google Maps</button> <!-- Botón para enviar ruta -->
     </div>
     <div id="map"></div> <!-- Contenedor del mapa -->
     <div id="loading" style="display: none;"> <!-- Contenedor para mensaje de carga -->
@@ -39,6 +40,7 @@
         <div class="loading-animation"></div> <!-- Aquí colocamos la animación -->
     </div>
   </main>
+
   
   <script src="../js/home.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADSFmUUMZqs7Q30cqZp_dAb64ZqUWLCl4&libraries=drawing&callback=initMap" async defer></script>
