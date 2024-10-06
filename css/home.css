@@ -1,20 +1,29 @@
 /* Estilo del header */
 header {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 20px; /* Aumentamos el padding para separarlos de la orilla */
+    padding: 10px 20px; /* Ajuste para dar más espacio */
     background-color: #A5B68D;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajustamos el tamaño y el espaciado del logo */
 .logo img {
     width: 50px; /* Mantiene el tamaño del logo */
     height: 50px; 
     object-fit: contain; /* Mantiene proporción del logo */
     margin-left: 10px; /* Añadimos margen izquierdo para separarlo más de la orilla */
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 20px;
+    color: #333;
+    text-align: right;
 }
 
 /* Estilo del ícono de menú tipo hamburguesa */
@@ -28,15 +37,15 @@ header {
 /* Estilo del menú desplegable */
 .menu {
     position: absolute;
-    top: 80px; /* Posición ajustada para estar debajo del header */
-    right: 20px; /* Ajustamos la posición para estar más separado de la orilla */
-    background-color: rgba(255, 255, 255, 0.726);
+    top: 60px; /* Ajustamos la posición */
+    right: 10px;
+    background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 200px;
-    display: none; /* Oculto por defecto */
-    z-index: 10; /* Mantiene el menú encima de otros elementos */
+    display: none;
+    z-index: 10;
 }
 
 .menu ul {
@@ -69,19 +78,10 @@ header {
     background-color: #218838;
 }
 
-/* Estilo responsivo */
-@media screen and (max-width: 600px) {
-    .menu {
-        width: 150px;
-    }
-
-    .menu li {
-        padding: 10px;
-    }
-}
-
 /* Estilo general del body */
 body {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,8 +89,9 @@ body {
     margin: 0;
 }
 
-/* Estilos para el contenedor principal */
 main {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -101,7 +102,7 @@ main {
 .actions {
     display: flex;
     flex-direction: column;
-    width: 25%; /* Ajusta el ancho del contenedor de botones */
+    width: 25%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
@@ -110,7 +111,7 @@ main {
 
 /* Estilo para los botones de acción */
 .actions button {
-    margin: 10px 0; /* Espaciado entre botones */
+    margin: 10px 0;
     padding: 10px;
     background-color: #DA8359;
     color: white;
@@ -125,35 +126,93 @@ main {
 
 /* Estilo para el contenedor del mapa */
 #map {
-    height: 400px; /* Altura del mapa */
-    width: 70%; /* Ancho del mapa */
-    border-radius: 8px; /* Esquinas redondeadas */
+    height: 400px;
+    width: 70%;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo del contenedor de carga */
+/* Contenedor de carga */
 #loading {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 400px; /* Tamaño similar al mapa */
+    align-items: center;
+    height: 400px;
     width: 70%;
-    border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
+    color: #333;
 }
 
 .loading-animation {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #DA8359;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     animation: spin 2s linear infinite;
 }
 
+/* Animación de carga */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .logo img {
+        width: 80px;
+    }
+
+    .menu-icon {
+        font-size: 30px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actions {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #map {
+        width: 100%;
+    }
+
+    #loading {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .menu-icon {
+        font-size: 25px;
+    }
+
+    .page-title {
+        font-size: 18px;
+    }
+
+    .actions button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #map {
+        height: 300px;
+    }
 }

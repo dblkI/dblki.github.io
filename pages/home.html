@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - DEMÉTER</title>
+  <title>TLALOK</title>
   <link rel="stylesheet" href="../css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="logo">
       <img src="../images/logo.webp" alt="DEMÉTER Logo">
     </div>
+    <h2 class="page-title">TLALOK</h2> 
     <div class="menu-icon" id="menuIcon">
       &#9776;
     </div>
@@ -32,16 +34,15 @@
         <button id="btnDrawPolygon">Delimitar región</button>
         <button id="btnClearMap">Limpiar mapa</button>
         <button id="btnGenerateKeylines">Generar Keylines</button>
-        <button id="btnSendRoute" style="display: none;">Enviar ruta a Google Maps</button> <!-- Botón para enviar ruta -->
+        <button id="btnSendRoute" style="display: none;">Enviar ruta a Google Maps</button>
     </div>
-    <div id="map"></div> <!-- Contenedor del mapa -->
-    <div id="loading" style="display: none;"> <!-- Contenedor para mensaje de carga -->
+    <div id="map"></div>
+    <div id="loading" style="display: none;">
         <p>Generando Keylines...</p>
-        <div class="loading-animation"></div> <!-- Aquí colocamos la animación -->
+        <div class="loading-animation"></div>
     </div>
   </main>
 
-  
   <script src="../js/home.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADSFmUUMZqs7Q30cqZp_dAb64ZqUWLCl4&libraries=drawing&callback=initMap" async defer></script>
 </body>
